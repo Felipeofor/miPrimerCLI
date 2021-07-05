@@ -7,24 +7,26 @@
   padding: 0;
 }
 
-body,
+body{
+  background-color: black;
+}
 html {
   margin: 0;
   padding: 0;
-  height: 100%;
+  background-color: black
+}
+
+.container {
+  background-color: black;
+  margin: 0;
+}
+
+#root {
+  background-color: black;
 }
 
 img {
   width: 100%;
-}
-
-.container {
-  margin: auto;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  color: black;
 }
 
 
