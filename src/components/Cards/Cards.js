@@ -8,7 +8,18 @@ import {useState} from 'react';
 export default function Cards () {
 
     const [counter,setCounter] = useState(0);
-    const noHayStock = 5;
+    const stock = 5;
+    function agregar(){
+        if(counter < stock){
+          setCounter(counter+1)
+        }
+      }
+
+    function quitar(){
+        if(counter > 0){
+          setCounter(counter-1)
+        }
+      }
 
     return (
         <div className="Cards">
@@ -22,13 +33,13 @@ export default function Cards () {
                 </div>
                 <div className="card-footer">
                 <div>
-                <h2 className={counter < 0 ? 'Ingresa un valor valido' : counter > 0 ? {noHayStock} : null }>{counter}</h2>
+                <h2 className={counter}>{counter}</h2>
                 <div className="botones" >
-                    <button onClick={()=>setCounter(counter-1)} >-</button>
-                    <button onClick={()=>setCounter(counter+1)} >+</button>
+                    <button onClick={quitar} >-</button>
+                    <button onClick={agregar} >+</button>
+                    
+                </div><button className="comprar" onAdd={counter}>Comprar</button>
                 </div>
-                </div>
-                    <button className="comprar" onAdd={counter}>Comprar</button>
                 </div>
                 </div>
             </div>

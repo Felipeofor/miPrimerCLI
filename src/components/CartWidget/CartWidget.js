@@ -12,7 +12,7 @@ export default function CartWidget(){
   							<circle cx="17" cy="19" r="2" />
   							<path d="M17 17h-11v-14h-2" />
   							<path d="M6 5l14 1l-1 7h-13" />
-							</svg> <h3>{ Cards.counter }</h3>
+							</svg> <h3>{ Cards.comprar }</h3>
         </div>
 
     )
