@@ -1,11 +1,21 @@
 import react from 'react';
-import './Cards.scss';
+import './ItemList.scss';
 import {useState} from 'react';
+import {Item} from '../Item/Item';
 
 
 
 
-export default function Cards () {
+export default function ItemList () {
+
+        /*Item*/
+
+        const [showModal, setShowModal] = useState(false);
+        const openModal = (props) => {
+          setShowModal(true, props);
+        };
+
+        /*Contador*/
 
     const [counter,setCounter] = useState(0);
     const stock = 5;
@@ -26,10 +36,10 @@ export default function Cards () {
            <div className="row row-cols-1 row-cols-md-3 g-4">
             <div className="col">
                 <div className="card h-100 mx-3">
-                <img src="..." class="card-img-top" alt="..."/>
+                <img src="https://jumboargentina.vteximg.com.br/arquivos/ids/614663-1000-1000/Aceite-De-Girasol-Cocinero-900-Ml-1-32670.jpg?v=637409202878630000" class="card-img-top" alt="Producto n°1"/>
                 <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <h5 className="card-title">Aceite</h5>
+                    <p className="card-text">Aceite de cocina de primera calidad </p>
                 </div>
                 <div className="card-footer">
                 <div>
@@ -38,7 +48,10 @@ export default function Cards () {
                     <button onClick={quitar} >-</button>
                     <button onClick={agregar} >+</button>
                     
-                </div><button className="comprar" onAdd={counter}>Comprar</button>
+                </div><button className="caracteristicas-btn" onClick={openModal} 
+            >Ver caracteristicas</button>
+            {showModal ? <Item setShowModal={setShowModal}
+            /> : null}
                 </div>
                 </div>
                 </div>

@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "title": "Aceite Cocinero",
+        "description": "Aceite pura de girasol",
+        "price": "$200",
+        "pictureUrl": "https://jumboargentina.vteximg.com.br/arquivos/ids/614663-1000-1000/Aceite-De-Girasol-Cocinero-900-Ml-1-32670.jpg?v=637409202878630000"
+    },
+    {
+        "id": 2,
+        "title": "Fideos Matarazzo",
+        "description": "Nidos Fettuccine",
+        "price": "$200",
+        "pictureUrl": "https://www.molinos.com.ar/wp-content/uploads/2020/05/MTZZ-Fettuccine_producto.png"
+    },
+    {
+        "id": 3,
+        "title": "Polenta x 2u",
+        "description": "Polenta Presto Pronta",
+        "price": "$100",
+        "pictureUrl": "https://m.media-amazon.com/images/I/41vYLBgL6jL.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Arroz",
+        "description": "Arroz Molinos Ala",
+        "price": "$100",
+        "pictureUrl": "https://http2.mlstatic.com/D_NQ_NP_381025-MLA25354091116_022017-O.jpg"
+    }
+]

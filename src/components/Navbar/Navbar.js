@@ -30,7 +30,7 @@ export default function Navbar(){
           					</ul>
        	 					</li>
         					<li className="nav-item">
-          						<a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contacto</a>
+          						<a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contacto </a>
         					</li>
      	 				</ul>
 						  <CartWidget/>
