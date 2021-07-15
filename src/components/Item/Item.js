@@ -46,15 +46,13 @@ function quitar(){
                     <h5 className="card-title">{myItem.title}</h5>
                     <p className="card-text">{myItem.description}</p>
                 </div>
-                <div className="card-footer">{myItem.description}
+                <div className="card-footer">{myItem.price}
                 <div>
                 <h2 className={counter}>{counter}</h2>
                 <div className="botones" >
                     <button onClick={quitar} >-</button>
-                    <button onClick={agregar} >+</button>
-                    
-                </div><button className="caracteristicas-btn" 
-            >Ver caracteristicas</button>
+                    <button onClick={agregar} >+</button> 
+                </div><button className="caracteristicas-btn" >Ver caracteristicas</button>
                 </div>
                 </div>
                 </div>
