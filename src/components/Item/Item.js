@@ -16,17 +16,18 @@ export const Item = ({ setShowModal, elements}) => {
   };
 
 
+ const productos = fetch('../../public/productos');
+
+  setTimeout(() => {
+    
+}, 2000);
+  
+
   /*Imagen y caracteristicas del pokemon dentro del modal */
   return ReactDom.createPortal(
     <div className="container" ref={modalRef} onClick={closeModal}>
-      <div className="modal">
-        <div className="description">
-          <h1>{user.title}</h1>
-         </div> 
-         <button className="comprar">Comprar</button>
-      </div>
-      </div>
-      ,document.getElementById("Item")
+      <Item />
+    </div>
   );
 };
 export default Item;

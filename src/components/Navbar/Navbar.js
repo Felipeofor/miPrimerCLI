@@ -25,7 +25,6 @@ export default function Navbar(){
           					<ul className="dropdown-menu" aria-labelledby="navbarDropdown">
             					<li><a className="dropdown-item" href="#">1er categoria</a></li>
             					<li><a className="dropdown-item" href="#">2da categoria</a></li>
-            					<li><hr className="dropdown-divider"/></li>
             					<li><a className="dropdown-item" href="#">3ra categoria</a></li>
           					</ul>
        	 					</li>
