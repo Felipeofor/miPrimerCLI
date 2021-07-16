@@ -1,5 +1,6 @@
 import React, { useState , useEffect} from "react";
 import "./Item.scss";
+import productos from "../productos.json";
 
 export default function App() {
   
@@ -37,27 +38,29 @@ function quitar(){
   
   
   return (
-    <div className="Cards">
-           <div className="row row-cols-1 row-cols-md-3 g-4">
+    <div className="Item">
+      {productos.map(function (producto){
+        return <div className="Item_card" key={producto.id}>
             <div className="col">
                 <div className="card h-100 mx-3">
-                <img src={myItem.pictureUrl} class="card-img-top" alt="Producto n°1"/>
+                <img width={300} height={250}src={producto.pictureUrl} class="card-img-top" alt={productos.id}/>
                 <div className="card-body">
-                    <h5 className="card-title">{myItem.title}</h5>
-                    <p className="card-text">{myItem.description}</p>
+                    <h5 className="card-title">{producto.title}</h5>
+                    <p className="card-text">{producto.description}</p>
                 </div>
-                <div className="card-footer">{myItem.price}
+                <div className="card-footer">{producto.price}
                 <div>
                 <h2 className={counter}>{counter}</h2>
                 <div className="botones" >
                     <button onClick={quitar} >-</button>
                     <button onClick={agregar} >+</button> 
-                </div><button className="caracteristicas-btn" >Ver caracteristicas</button>
+                </div><button className="caracteristicas_btn" >Ver mas</button>
                 </div>
                 </div>
                 </div>
             </div>
             </div>
-        </div>
+      })
+           }</div>
   );
 }
