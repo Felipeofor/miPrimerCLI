@@ -1,6 +1,8 @@
-import React, { useState , useEffect} from "react";
+import React, { useState , useEffect } from "react";
 import "./Item.scss";
 import productos from "../productos.json";
+import { ItemDetail } from "../ItemDetail";
+import { BrowserRouter as Link} from 'react-router-dom';
 
 export default function App() {
   
@@ -16,7 +18,7 @@ export default function App() {
         setMyItem(itemJson)
       })
   },[])
-  
+ 
 
   console.log("myItem-->",myItem )
 
@@ -39,14 +41,14 @@ function quitar(){
   
   return (
     <div className="Item">
+      
       {productos.map(function (producto){
-        return <div className="Item_card" key={producto.id}>
-            <div className="col">
+        return  <div className="Item_card" key={producto.id}>
+           <div className="col">
                 <div className="card h-100 mx-3">
-                <img width={300} height={250}src={producto.pictureUrl} class="card-img-top" alt={productos.id}/>
+                 <Link to={ "/Productos/" + producto.id }><img width={300} height={250}src={producto.pictureUrl} class="card-img-top" alt={producto.id}/></Link>
                 <div className="card-body">
                     <h5 className="card-title">{producto.title}</h5>
-                    <p className="card-text">{producto.description}</p>
                 </div>
                 <div className="card-footer">{producto.price}
                 <div>
@@ -54,7 +56,7 @@ function quitar(){
                 <div className="botones" >
                     <button onClick={quitar} >-</button>
                     <button onClick={agregar} >+</button> 
-                </div><button className="caracteristicas_btn" >Ver mas</button>
+                </div><Link to={ "/Productos/" + producto.id }><button className="caracteristicas_btn" >Ver mas</button></Link>
                 </div>
                 </div>
                 </div>

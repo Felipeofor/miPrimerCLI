@@ -1,0 +1,16 @@
+.productos_conteiner {
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+
+.productos_columna {
+    max-width: 400px;
+    width: 80%;
+    margin: 15px;
+    font-size: 1.5rem;
+}
+
+.productos_img {
+    border-radius: 15px;
+}
