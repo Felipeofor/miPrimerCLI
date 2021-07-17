@@ -46,7 +46,7 @@ function quitar(){
         return  <div className="Item_card" key={producto.id}>
            <div className="col">
                 <div className="card h-100 mx-3">
-                 <Link to={ "/Productos/" + producto.id }><img width={300} height={250}src={producto.pictureUrl} class="card-img-top" alt={producto.id}/></Link>
+                 <Link to={ "/Productos" + producto.id }><img width={300} height={250}src={producto.pictureUrl} class="card-img-top" alt={producto.id}/></Link>
                 <div className="card-body">
                     <h5 className="card-title">{producto.title}</h5>
                 </div>
@@ -56,7 +56,7 @@ function quitar(){
                 <div className="botones" >
                     <button onClick={quitar} >-</button>
                     <button onClick={agregar} >+</button> 
-                </div><Link to={ "/Productos/" + producto.id }><button className="caracteristicas_btn" >Ver mas</button></Link>
+                </div><Link to={ "/Productos" + producto.id }><button className="caracteristicas_btn" >Ver mas</button></Link>
                 </div>
                 </div>
                 </div>

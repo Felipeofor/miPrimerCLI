@@ -2,13 +2,16 @@
     display: flex;
     color: white;
     justify-content: center;
+    margin-top: 5em;
+    flex-wrap: wrap;
 }
 
 .productos_columna {
-    max-width: 400px;
-    width: 80%;
+    max-width: 400px;;
     margin: 15px;
     font-size: 1.5rem;
+    height: auto;
+    height: 80%;
 }
 
 .productos_img {
