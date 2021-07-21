@@ -1,0 +1,143 @@
+body{
+  background-image: url('https://www.wallpaperuse.com/wallp/45-450899_m.jpg');
+  background-attachment: fixed;
+}
+
+/***********Navbar**********/
+
+.navbar {
+  background-color: black;
+  color: white
+}
+
+#header {
+  background-color: black;
+}
+
+.navbar-brand {
+  text-align: center;
+  font-size: 3rem;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073,
+    0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+}
+
+
+.containerNav{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5vw 2.5vw;
+  font-size: 1.5vw;
+  background-color: #bb0000;
+  color: white;
+}
+
+
+
+.CartWidget{
+  font-size: 2vw;
+  transition: 200ms ease
+}
+.CartWidget:hover{
+  color: rgb(219, 71, 71);
+  font-size: 2.3vw;
+  transition: 200ms ease;
+}
+a.navbar-brand{
+  font-size: 2vw;
+}
+.nav-item{
+  color: white;
+  
+}
+.nav-item:hover{
+  font-weight: bold;
+  transition: 200ms ease;
+}
+.containerItemListContainer, .containerCategory{
+  width: 100%;
+  padding: 1vw 2vw;
+  display: flex;
+  justify-content: center;
+  /* background-color: blue; */
+}
+.containerItemList{
+  /* background-color: brown; */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.containerItemCount{
+  background-color: rgba(54, 50, 50, 0.174);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.itemCount{
+  width: 75%;
+  display: flex;
+  justify-content: space-evenly;
+  
+  transition: 200ms;
+}
+.itemCount:hover{
+  transform: scale(1.05);
+  transition: 200ms;
+}
+.boxQuantity{
+  font-size: 2vw;
+  padding: 0 1rem;
+  border: 1px solid #383838;
+  border-radius: 6px;
+}
+.containerCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: 300ms;
+}
+.containerCard:hover{
+  box-shadow: 5px 5px 10px rgba(170, 6, 6, 0.9);
+  transition: 300ms;
+  border: 2px solid  rgba(197, 120, 120, 0.486);
+
+}
+.linkCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.containerCard a {
+  text-decoration: none;
+  color: black;
+}
+.imageCard{
+  width: 100%;
+  height: 20vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.containerCategory{
+  flex-direction: column;
+  align-items: center;
+  background-color: blanchedalmond;
+}
+
+/*************Media queries************/
+
+@media (min-width: 1px) and (max-width: 991.98px) { 
+  .containerItemList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
