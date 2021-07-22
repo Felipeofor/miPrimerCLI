@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import NavBar from "./components/Navbar";
 import ItemListContainer from './components/ItemListContainer'
 import Categories from "./components/Categories";
+import Home from "./components/Home";
 
 //Importamos los estilos
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -17,7 +18,8 @@ function App() {
             <BrowserRouter>
                 <NavBar />
                 <Switch>
-                    <Route exact path='/' component={ ItemListContainer } />
+                    <Route exact path={'/Home'}  component={Home}/>
+                    <Route exact path='/Productos' component={ ItemListContainer } />
                     <Route exact path={'/Productos/Categoria/:categoryByID'}  component={Categories}/>
                 </Switch>
                {/* Cualquier otra URL que se escriba y no coincida con lo que ya tenemos configurado, nos enviará al componente que coincida que con el path que coloquemos en el Redirect */}
