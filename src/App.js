@@ -23,7 +23,7 @@ function App() {
                     <Route exact path={'/Productos/Categoria/:categoryByID'}  component={Categories}/>
                 </Switch>
                {/* Cualquier otra URL que se escriba y no coincida con lo que ya tenemos configurado, nos enviará al componente que coincida que con el path que coloquemos en el Redirect */}
-               <Redirect to='/' />
+               <Redirect to='/Home' />
                {/* En este caso, este Redirect nos llevará al renderizado de los productos */}
             </BrowserRouter>
         </div>

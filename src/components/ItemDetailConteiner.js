@@ -1,4 +1,4 @@
-import ItemList from "./ItemList";
+import Item from "./Item";
 import { Spinner } from 'reactstrap';
 import { useState, useEffect } from "react";
 
@@ -24,7 +24,7 @@ function ItemDetailConteiner() {
         <div className='containerItemListContainer'>
             { products.length === 0 
                 ? <Spinner color="black"/>
-                : <ItemList products={products}/>
+                : <Item />
             }
         </div>
     )

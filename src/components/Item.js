@@ -3,9 +3,10 @@
 //     CardTitle, CardSubtitle, Button
 // } from 'reactstrap';
 import { Link } from 'react-router-dom';
+
 // import ItemCount from './ItemCount';
   
-function Item({ id, image,  title, category, price, stock }){
+function Item({ id, image,  title, category, price}){
     return(
             <div className='containerCard card col-3 mx-1 my-1' >
                 <Link to='/ItemDetailConteiner' className='linkCard col-12'>

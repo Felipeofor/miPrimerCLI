@@ -130,6 +130,19 @@ a.navbar-brand{
   background-color: blanchedalmond;
 }
 
+/*************Home************/
+
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content:space-evenly;
+  margin: 3em 0;;
+}
+
+
 /*************Media queries************/
 
 @media (min-width: 1px) and (max-width: 991.98px) { 
