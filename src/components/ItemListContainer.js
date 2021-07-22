@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
-import { Spinner } from 'reactstrap';
+import PulseLoader from "react-spinners/PulseLoader";
 
 function ItemListContainer() {
 
@@ -26,7 +26,9 @@ function ItemListContainer() {
     return(
         <div className='containerItemListContainer'>
             { products.length === 0 
-                ? <Spinner color="black"/>
+                ? <PulseLoader
+
+                />
                 : <ItemList products={products}/>
             }
         </div>

@@ -19,7 +19,7 @@ export default function Categories() {
     console.log(useParams())
 
     const getCategory = async () =>{
-        let llamada = fetch(`../JSON/Datalist.json/${categoryByID}`);
+        let llamada = fetch(`../JSON/Datalist.json`);
         llamada = await llamada;
         llamada = await llamada.text();
         setProductsCategory(JSON.parse(llamada));

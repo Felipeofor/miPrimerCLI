@@ -100,6 +100,8 @@ a.navbar-brand{
   justify-content: space-between;
   align-items: center;
   transition: 300ms;
+  width: 360px;
+  height: auto;
 }
 .containerCard:hover{
   box-shadow: 5px 5px 10px rgba(170, 6, 6, 0.9);
@@ -142,15 +144,28 @@ a.navbar-brand{
   margin: 3em 0;;
 }
 
+.home_containerCard {
+  width: 360px;
+  height:  auto;
+  text-decoration: none;
+}
+
+.home_containerCard h3 {
+  text-decoration: none;
+}
+
 
 /*************Media queries************/
 
-@media (min-width: 1px) and (max-width: 991.98px) { 
-  .containerItemList {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
+@media (min-width: 1px) and (max-width: 600.98px) { 
+ 
+  .containerCard {
+    width: 260px;
+    height: auto;
+  }
+
+  .home_containerCard {
+    width: 260px;
+    height: 140px;;
   }
 }
