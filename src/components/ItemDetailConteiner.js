@@ -6,7 +6,14 @@ function ItemDetailConteiner(products) {
 
     return (
         <div className='containerItemListContainer'>
-            <ItemDetail products={products.id}/>
+            <ItemDetail key={products.id} 
+                        id={products.id} 
+                        image={products.image} 
+                        stock={products.stock} 
+                        title={products.title} 
+                        description={products.descripcion} 
+                        category={products.categoria}
+                        price={products.price}/>
             <ItemCount/>
         </div>
     )

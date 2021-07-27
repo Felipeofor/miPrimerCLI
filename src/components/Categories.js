@@ -4,11 +4,12 @@ import React from 'react'
  * podemos usar el Hook useParams
  *  */
 import { useParams } from 'react-router-dom';
-
+import ItemList from "./ItemList";
+import PulseLoader from "react-spinners/PulseLoader";
 import {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Categories() {
+export default function Categories(products) {
     const [productsCategory,setProductsCategory] = useState([]);
 
  
@@ -16,14 +17,8 @@ export default function Categories() {
      * y colocar el nombre el params que usamos en el Switch
      */
     const {categoryByID} = useParams();
-    console.log(useParams())
 
-    // const getCategory = async () =>{
-    //     let llamada = fetch(`../JSON/Datalist.json`);
-    //     llamada = await llamada;
-    //     llamada = await llamada.text();
-    //     setProductsCategory(JSON.parse(llamada));
-    // };
+
 
     const getCategory = async () => {
         // Espero a que la llamda se fetchee
@@ -40,14 +35,13 @@ export default function Categories() {
 
     return (
         <div className='containerCategory'>
-            <h1>Categoria {categoryByID}</h1>
-            {productsCategory.map(element =>{
-                return (
-
-                        // <Link to={`/ItemDetailConteiner/${element.id}`}><p> {element.title}</p>
-                        // </Link>
-                )
-            })}
+            { productsCategory.length === 0 
+                        ? <PulseLoader
+                        />
+                        : <Link to={`/ItemDetail/${products.id}`}>
+                            <ItemList products={productsCategory}/>
+                        </Link>
+                    }
         </div>
     )
 }

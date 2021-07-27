@@ -3,7 +3,8 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 // Importamos los componentes
 import NavBar from "./components/Navbar";
-import ItemListContainer from './components/ItemListContainer'
+import ItemListContainer from './components/ItemListContainer';
+import ItemDetailConteiner from './components/ItemDetailConteiner';
 import Categories from "./components/Categories";
 import Home from "./components/Home";
 
@@ -18,9 +19,10 @@ function App() {
             <BrowserRouter>
                 <NavBar />
                 <Switch>
-                    <Route exact path={'/Home'}  component={Home}/>
+                    <Route exact path='/Home'  component={Home}/>
                     <Route exact path='/Productos' component={ ItemListContainer } />
-                    <Route exact path={'/Productos/Categoria/:categoryByID'}  component={Categories}/>
+                    <Route exact path='/Productos/Categoria/:categoryByID'  component={Categories}/>
+                    <Route exact path='/Productos/Categoria/ItemDetail/:productsTitle'  component={ ItemDetailConteiner }/>
                 </Switch>
                {/* Cualquier otra URL que se escriba y no coincida con lo que ya tenemos configurado, nos enviará al componente que coincida que con el path que coloquemos en el Redirect */}
                <Redirect to='/Home' />
