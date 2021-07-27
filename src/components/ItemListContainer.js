@@ -27,7 +27,6 @@ function ItemListContainer() {
         <div className='containerItemListContainer'>
             { products.length === 0 
                 ? <PulseLoader
-
                 />
                 : <ItemList products={products}/>
             }

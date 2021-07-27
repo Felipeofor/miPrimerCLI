@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 function Item({ id, image,  title, category, price}){
     return(
             <div className='containerCard card mx-1 my-1' >
-                <Link to='/ItemDetailConteiner' className='linkCard col-12'>
+                <Link to={`/Item/${title}`} className='linkCard col-12'>
                 <div className='imageCard col-12' style={{backgroundImage:`url(${image})`, width: '80%'}}></div>
                 <h3 key={id} >{title}</h3>
                 <h4>{`$${price}`}</h4>

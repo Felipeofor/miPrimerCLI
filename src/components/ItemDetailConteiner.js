@@ -1,10 +1,13 @@
+import React from "react";
+import ItemDetail  from "./ItemDetail";
+import ItemCount  from "./ItemCount";
 
-
-function ItemDetailConteiner() {
+function ItemDetailConteiner(products) {
 
     return (
         <div className='containerItemListContainer'>
-            <ItemList products={products.id}/>
+            <ItemDetail products={products.id}/>
+            <ItemCount/>
         </div>
     )
 }
