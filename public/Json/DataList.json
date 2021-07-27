@@ -59,7 +59,7 @@
         "image":"https://firesports.com.mx/wp-content/uploads/2021/05/Dobok-entrenamiento1.jpg",
         "title":"Dobok adulto",
         "descripcion": "Elaborado de 55% Algodón y 45% poliéster. Cuello blanco, Ideal para comenzar en el entrenamiento del taekwondo. Resistente, durable y cómodo. Incluye: Casaca, pantalón y cinta blanca.",
-        "categoria":"Indumentaria",
+        "categoria":"Doboks",
         "price": "500",
         "stock": "3"
     },
@@ -68,7 +68,7 @@
         "image":"https://firesports.com.mx/wp-content/uploads/2020/06/DOBOK-INFANTIL7.jpg",
         "title":"Dobok infantil",
         "descripcion": "Elaborado de 55% Algodón y 45%p poliester con cinta incluida color blanco.",
-        "categoria":"Indumentaria",
+        "categoria":"Doboks",
         "price": "400",
         "stock": "4"
     },
