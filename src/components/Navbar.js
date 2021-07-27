@@ -27,9 +27,9 @@ function NavBar(){
           						<a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias
          						</a>
           					<ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-							  <Link to="/Productos/Proteccion" className="dropdown-item">Protección</Link>
-							  <Link to="/Productos/Doboks" className="dropdown-item">Doboks</Link>
-							  <Link to="/Productos/Manoplas" className="dropdown-item">Manoplas</Link>
+							  <Link to="/Productos/Categoria/Proteccion" className="dropdown-item">Protección</Link>
+							  <Link to="/Productos/Categoria/Doboks" className="dropdown-item">Doboks</Link>
+							  <Link to="/Productos/Categoria/Manoplas" className="dropdown-item">Manoplas</Link>
           					</ul>
        	 					</li>
      	 				</ul>

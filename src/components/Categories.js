@@ -18,12 +18,22 @@ export default function Categories() {
     const {categoryByID} = useParams();
     console.log(useParams())
 
-    const getCategory = async () =>{
-        let llamada = fetch(`../JSON/Datalist.json`);
-        llamada = await llamada;
-        llamada = await llamada.text();
-        setProductsCategory(JSON.parse(llamada));
-    };
+    // const getCategory = async () =>{
+    //     let llamada = fetch(`../JSON/Datalist.json`);
+    //     llamada = await llamada;
+    //     llamada = await llamada.text();
+    //     setProductsCategory(JSON.parse(llamada));
+    // };
+
+    const getCategory = async () => {
+        // Espero a que la llamda se fetchee
+        const llamada = await fetch('../JSON/Datalist.json');
+        // Aplico el método JSON() para extraer la respuesta a la petición
+        const responsellamada = await llamada.json()
+        // Vemos qué llegó
+
+        setProductsCategory(responsellamada.filter((product) => product.categoria === categoryByID));
+    }
 
     useEffect(() => {
         getCategory();
@@ -31,7 +41,7 @@ export default function Categories() {
 
     return (
         <div className='containerCategory'>
-            <h1>CATEGORIA {categoryByID}</h1>
+            <h1>Categoria {categoryByID}</h1>
             {productsCategory.map(element =>{
                 return (
                         <Link to={`/ItemDetailConteiner/${element.id}`}><p> {element.title}</p>
