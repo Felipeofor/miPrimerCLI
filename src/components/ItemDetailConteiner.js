@@ -14,7 +14,8 @@ function ItemDetailConteiner(products) {
                         description={products.descripcion} 
                         category={products.categoria}
                         price={products.price}/>
-            <ItemCount/>
+            <ItemCount
+            />
         </div>
     )
 }

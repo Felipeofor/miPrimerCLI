@@ -7,9 +7,8 @@ import { useParams } from 'react-router-dom';
 import ItemList from "./ItemList";
 import PulseLoader from "react-spinners/PulseLoader";
 import {useState, useEffect} from 'react';
-import { Link } from 'react-router-dom';
 
-export default function Categories(products) {
+export default function Categories() {
     const [productsCategory,setProductsCategory] = useState([]);
 
  
@@ -31,16 +30,14 @@ export default function Categories(products) {
 
     useEffect(() => {
         getCategory();
-    },[]);
+    },[categoryByID]);
 
     return (
         <div className='containerCategory'>
             { productsCategory.length === 0 
                         ? <PulseLoader
                         />
-                        : <Link to={`/ItemDetail/${products.id}`}>
-                            <ItemList products={productsCategory}/>
-                        </Link>
+                        : <ItemList products={productsCategory}/>
                     }
         </div>
     )
