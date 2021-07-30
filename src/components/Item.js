@@ -1,10 +1,7 @@
-// import {
-//     Card, CardImg, CardText, CardBody,
-//     CardTitle, CardSubtitle, Button
-// } from 'reactstrap';
+
 import { Link } from 'react-router-dom';
 
-// import ItemCount from './ItemCount';
+import ItemCount from './ItemCount';
   
 function Item(products){
     return(
@@ -15,7 +12,6 @@ function Item(products){
                 <h4>{`$${products.price}`}</h4>
                 <h5>{products.category}</h5>
                 </Link>
-                {/* <ItemCount stock={ stock } initial={ 1 }/> */}
             </div>
     )
 }
