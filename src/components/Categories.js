@@ -9,7 +9,7 @@ import PulseLoader from "react-spinners/PulseLoader";
 import {useState, useEffect} from 'react';
 
 export default function Categories() {
-    const [productsCategory,setProductsCategory] = useState([]);
+    const [productosCategory,setProductsCategory] = useState([]);
 
  
     /**para usar useParams debemos usar la sintaxys puesta abajo 
@@ -25,7 +25,7 @@ export default function Categories() {
         // Aplico el método JSON() para extraer la respuesta a la petición
         const responsellamada = await llamada.json()
         // Vemos qué llegó
-        setProductsCategory(responsellamada.filter((product) => product.categoria === categoryByID));
+        setProductsCategory(responsellamada.filter((producto) => producto.categoria === categoryByID));
     }
 
     useEffect(() => {
@@ -34,10 +34,10 @@ export default function Categories() {
 
     return (
         <div className='containerCategory'>
-            { productsCategory.length === 0 
+            { productosCategory.length === 0 
                         ? <PulseLoader
                         />
-                        : <ItemList products={productsCategory}/>
+                        : <ItemList producto={productosCategory}/>
                     }
         </div>
     )
