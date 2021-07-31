@@ -1,19 +1,19 @@
 import Item from './Item'
 
-function ItemList({ producto }){ //destruturing
+function ItemList({products}){ //destruturing
     return(
         <div className='containerItemList'>
-            {producto.map(producto => {
+            {products.map(product => {
                 return(
                     <Item 
-                        key={producto.id} 
-                        id={producto.id} 
-                        image={producto.image} 
-                        stock={producto.stock} 
-                        title={producto.title} 
-                        description={producto.descripcion} 
-                        category={producto.categoria}
-                        price={producto.price}
+                        key={product.id} 
+                        id={product.id} 
+                        image={product.image} 
+                        stock={product.stock} 
+                        title={product.title} 
+                        description={product.descripcion} 
+                        category={product.categoria}
+                        price={product.price}
                     />
                 )
             })}
