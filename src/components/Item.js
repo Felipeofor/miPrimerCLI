@@ -1,32 +1,10 @@
 
-import { Link, useParams } from 'react-router-dom';
-import {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 
 // import ItemCount from './ItemCount';
   
 function Item(products){
 
-    const [product,setProduct] = useState([]);
-        /**para usar useParams debemos usar la sintaxys puesta abajo 
-     * y colocar el nombre el params que usamos en el Switch
-     */
-         const {productByID} = useParams();
-
-
-
-         const getProduct = async () => {
-             // Espero a que la llamda se fetchee
-             const llamada = await fetch('../../JSON/Datalist.json');
-             // Aplico el método JSON() para extraer la respuesta a la petición
-             const responsellamada = await llamada.json()
-             // Vemos qué llegó
-             setProduct(responsellamada.filter((product) => product === productByID));
-         }
-     
-         useEffect(() => {
-             getProduct();
-         },[productByID]);
-     
 
     return(
             <div className='containerCard card mx-1 my-1' >
