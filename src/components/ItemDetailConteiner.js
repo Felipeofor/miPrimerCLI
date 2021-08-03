@@ -3,7 +3,7 @@ import ItemDetail  from "./ItemDetail";
 import ItemCount  from "./ItemCount";
 import PulseLoader from "react-spinners/PulseLoader";
 
-function ItemDetailConteiner() {
+function ItemDetailConteiner({ id }) {
 
     const [products, setProducts] = useState([])
 
@@ -12,11 +12,12 @@ function ItemDetailConteiner() {
     // No se puede invocar Await sin un Async
     const getProducts = async () => {
         // Espero a que la data se fetchee
-        const data = await fetch('../../../Json/Data.json')
+        const data = await fetch('../../../Json/Datalist.json')
         // Aplico el método JSON() para extraer la respuesta a la petición
         const responseData = await data.json()
         // Vemos qué llegó
         setProducts(responseData)
+        console.log(responseData);
     }
 
 
@@ -25,19 +26,19 @@ function ItemDetailConteiner() {
     }, [])
 
     return (
-        <div className='containerItemListContainer'>
+        <div className='containerDetailContainer'>
            {products.length === 0 ? <PulseLoader/> : 
-              <> 
-              <h3>hola</h3> 
-              <ItemDetail key={products.id} 
-                        id={products.id} 
-                        image={products.image} 
-                        stock={products.stock} 
-                        title={products.title} 
-                        description={products.descripcion} 
-                        category={products.categoria}
-                        price={products.price}/>
-             <ItemCount stock={ products.stock } initial={ 1 }/></>
+              <div className='containerDetailContainer__'>  
+              <ItemDetail key={products[0]} 
+                        id={products[0]} 
+                        image={products[id].image} 
+                        stock={products[0]} 
+                        title={products[0]} 
+                        description={products[0].description} 
+                        category={products[0]}
+                        price={products[0]}/>
+                        <p>Descripción: {products[0].description}</p>
+             <ItemCount stock={ products[0] } initial={ 1 }/></div>
            }
         </div>
     )

@@ -1,25 +1,21 @@
 import React from 'react';
 import Item from './Item'
 
-const ItemDetail = ({ product }) => {
+const ItemDetail = ({ id }) => {
 
-  console.log(product);
   return (
     <>
     <Item
-      // key={product.id} 
-      // image={product.image} 
-      // stock={product.stock} 
-      // title={product.title} 
-      // description={product.descripcion} 
-      // category={product.categoria}
-      // price={product.price}
-      // <h3>{title}</h3>
-      // <p>${price}</p>
-      // <img src={image} alt="foto" style={{ width: 200 }} />
+      key={id.id} 
+      image={id.image} 
+      stock={id.stock} 
+      title={id.title} 
+      description={id.descripcion} 
+      category={id.categoria}
+      price={id.price}
       />
     </>
   );
 };
 
-export default ItemDetail;
+export default ItemDetail; 

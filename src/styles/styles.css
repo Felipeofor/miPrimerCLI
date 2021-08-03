@@ -154,6 +154,20 @@ a.navbar-brand{
   text-decoration: none;
 }
 
+/*************Detalles del producto************/
+
+.containerDetailContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.containerDetailContainer__Product{
+  padding: 2rem;
+  color: red;
+  font-size: 1.5rem;
+}
 
 /*************Media queries************/
 
