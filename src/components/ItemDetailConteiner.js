@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import ItemDetail  from "./ItemDetail";
-import ItemCount  from "./ItemCount";
+
 import PulseLoader from "react-spinners/PulseLoader";
 import { useParams } from 'react-router-dom';
 
@@ -19,8 +19,8 @@ function ItemDetailConteiner() {
         // Aplico el método JSON() para extraer la respuesta a la petición
         const responseData = await data.json()
         // Vemos qué llegó
-        setProducts(responseData.filter((products) => products.id === productById)[0]);
-        console.log();
+        setProducts(responseData.filter((items) => items.title === productById)[0]);
+        console.log(productById);
     }
 
 
@@ -30,18 +30,17 @@ function ItemDetailConteiner() {
 
     return (
         <div className='containerDetailContainer'>
-           {products.length === 0 ? <PulseLoader/> : 
+           { products.length === 0 ? <PulseLoader/> : 
               <div className='containerDetailContainer__Product'>  
-              <ItemDetail key={products[0]} 
-                        id={products[0]} 
-                        image={products[0]} 
-                        stock={products[0]} 
-                        title={products[0]} 
-                        description={products[0]} 
-                        category={products[0]}
-                        price={products[0]}/>
-                        <p>Descripción: {products[0]}</p>
-             <ItemCount stock={ products[0] } initial={ 1 }/>
+              <ItemDetail key={products.id} 
+                        id={products.id} 
+                        image={products.image} 
+                        stock={products.stock} 
+                        title={products.title} 
+                        description={products.descripcion} 
+                        category={products.categoria}
+                        price={products.price}/>
+             {/* <ItemCount stock={ products[0] } initial={ 1 }/> */}
              </div>
            }
         </div>

@@ -1,20 +1,18 @@
 import React from 'react';
-import Item from './Item'
+import ItemCount  from "./ItemCount";
 
-const ItemDetail = ({ id }) => {
+const ItemDetail = ({ id, image, stock, title, description, categoria, price }) => {
 
   return (
-    <>
-    <Item
-      key={id.id} 
-      image={id.image} 
-      stock={id.stock} 
-      title={id.title} 
-      description={id.descripcion} 
-      category={id.categoria}
-      price={id.price}
-      />
-    </>
+    <section className="itemDetail">
+      <img src={image}/>
+    <div className="ItemDetail__description"> 
+      {title} 
+      <p>Descripción: {description}</p>
+      <p>Precio: {price}</p>
+    </div>
+    <ItemCount stock={ stock } initial={ 1 }/>
+    </section>
   );
 };
 
