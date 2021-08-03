@@ -161,6 +161,7 @@ a.navbar-brand{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  color: red;
 }
 
 .containerDetailContainer__Product{

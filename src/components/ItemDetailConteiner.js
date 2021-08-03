@@ -2,10 +2,13 @@ import React, {useState, useEffect} from "react";
 import ItemDetail  from "./ItemDetail";
 import ItemCount  from "./ItemCount";
 import PulseLoader from "react-spinners/PulseLoader";
+import { useParams } from 'react-router-dom';
 
-function ItemDetailConteiner({ id }) {
+function ItemDetailConteiner() {
 
     const [products, setProducts] = useState([])
+
+    const {productById} = useParams();
 
     // API CALL  - Llamado a un archivo .JSON local
     // Creo una función asincrónica
@@ -16,29 +19,30 @@ function ItemDetailConteiner({ id }) {
         // Aplico el método JSON() para extraer la respuesta a la petición
         const responseData = await data.json()
         // Vemos qué llegó
-        setProducts(responseData)
-        console.log(responseData);
+        setProducts(responseData.filter((products) => products.id === productById)[0]);
+        console.log();
     }
 
 
     useEffect(() => {
         setTimeout(() => getProducts(), 500)
-    }, [])
+    }, [productById])
 
     return (
         <div className='containerDetailContainer'>
            {products.length === 0 ? <PulseLoader/> : 
-              <div className='containerDetailContainer__'>  
+              <div className='containerDetailContainer__Product'>  
               <ItemDetail key={products[0]} 
                         id={products[0]} 
-                        image={products[id].image} 
+                        image={products[0]} 
                         stock={products[0]} 
                         title={products[0]} 
-                        description={products[0].description} 
+                        description={products[0]} 
                         category={products[0]}
                         price={products[0]}/>
-                        <p>Descripción: {products[0].description}</p>
-             <ItemCount stock={ products[0] } initial={ 1 }/></div>
+                        <p>Descripción: {products[0]}</p>
+             <ItemCount stock={ products[0] } initial={ 1 }/>
+             </div>
            }
         </div>
     )
