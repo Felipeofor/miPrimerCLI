@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
-// import { useCartContext } from '../Context';
+import { useCartContext } from '../Context';
 
 function ItemCount(props){
     const[qty, setQty] = useState(0)
