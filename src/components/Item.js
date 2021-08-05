@@ -1,7 +1,5 @@
 
 import { Link } from 'react-router-dom';
-
-// import ItemCount from './ItemCount';
   
 function Item(products){
 

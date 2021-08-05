@@ -1,13 +1,11 @@
 import React, {useState, useEffect} from "react";
-import ItemDetail  from "./ItemDetail";
-
-import PulseLoader from "react-spinners/PulseLoader";
 import { useParams } from 'react-router-dom';
+import PulseLoader from "react-spinners/PulseLoader";
+import ItemDetail  from "./ItemDetail";
 
 function ItemDetailConteiner() {
 
     const [products, setProducts] = useState([])
-
     const {productById} = useParams();
 
     // API CALL  - Llamado a un archivo .JSON local
@@ -20,7 +18,6 @@ function ItemDetailConteiner() {
         const responseData = await data.json()
         // Vemos qué llegó
         setProducts(responseData.filter((items) => items.title === productById)[0]);
-        console.log(productById);
     }
 
 
@@ -40,7 +37,6 @@ function ItemDetailConteiner() {
                         description={products.descripcion} 
                         category={products.categoria}
                         price={products.price}/>
-             {/* <ItemCount stock={ products[0] } initial={ 1 }/> */}
              </div>
            }
         </div>
