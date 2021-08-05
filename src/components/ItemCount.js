@@ -5,7 +5,7 @@ import { Button } from 'reactstrap';
 
 function ItemCount(props){
     const[qty, setQty] = useState(0)
-    const { addToCart } = useCartContext();
+    const { updateCartCount } = useCartContext();
     
     const onIncrease = () => {
         const newValue = qty+1
@@ -35,7 +35,7 @@ function ItemCount(props){
             <div className='boxQuantity'>{ qty }</div>
             <Button color="primary" size="lg" active  onClick={ onIncrease } >+</Button>{' '}
             </div>
-            <Button color="success" className ='mt-2 mb-2' size="lg" active  onClick={ ()=> addToCart(item, qty) } >Agregar al Carrito</Button>
+            <Button color="success" className ='mt-2 mb-2' size="lg" active  onClick={ ()=> updateCartCount(qty) } >Agregar al Carrito</Button>
             <Link to= "/Cart" className ='mt-2 mb-2' size="lg">Ir al carrito</Link>
         </div>
     )
