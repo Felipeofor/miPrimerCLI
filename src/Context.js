@@ -6,16 +6,9 @@ const CartProvider = ({children}) =>{
     const [cartCount, setCartCount] = useState(0);
     const [cartItems, setCartItems] = useState([]);
 
-    const addToCart = (item, qty) =>{
-        if(cartItems.some(product = product.title === item.title)){
-            const copy = [...cartItems]
-            const repeteadIndex = cartItems.findeIndex (product => product.title === item.title);
-            copy[repeteadIndex] = {
-                ...copy[repeteadIndex],
-                count: copy[repeteadIndex].qty + qty
-            };
-            setCartItems(copy)
-        }
+    // const updateCartCount = qty =>{
+    //     setCartCount(prev =  prev + qty);
+    // }
 
         else{
          setCartItems([...cartItems,{...item, qty }]);   
@@ -25,7 +18,7 @@ const CartProvider = ({children}) =>{
     }
 
     return(
-        <CartContext.Provider value= {{ cartCount, cartItems , addToCart }}>{children}</CartContext.Provider>
+        <CartContext.Provider value= {{ cartCount }}>{children}</CartContext.Provider>
     )
 };
 
