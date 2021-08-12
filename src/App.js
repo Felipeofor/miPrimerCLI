@@ -6,7 +6,6 @@ import NavBar from "./components/Navbar";
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailConteiner from './components/ItemDetailConteiner';
 import Categories from "./components/Categories";
-import Home from "./components/Home";
 import Cart from "./components/Cart";
 import CartProvider, { CartContext } from "./Context";
 
@@ -22,15 +21,13 @@ function App() {
                 <BrowserRouter>
                     <NavBar />
                     <Switch>
-                        <Route exact path='/Home'  component={Home}/>
-                        <Route exact path='/Productos' component={ ItemListContainer } />
-                        <Route exact path='/Productos/Categoria/:categoryByID'  component={Categories}/>
-                        <Route exact path='/Productos/Categoria/ItemDetail/:productById'  component={ ItemDetailConteiner }/>
-                        <Route path="/cart" exact component={Cart} />
+                        <Route exact path = '/'  component={ItemListContainer}/>
+                        <Route exact path = '/Productos' component={ ItemListContainer } />
+                        <Route exact path = '/Productos/Categoria/:categoryByID'  component={ Categories } />
+                        <Route exact path = '/Productos/Categoria/ItemDetail/:productById'  component={ ItemDetailConteiner }/>
+                        <Route exact path = '/cart' exact component={Cart} />
+                        <Route path = { '*' } component={ItemListContainer}/>
                     </Switch>
-                {/* Cualquier otra URL que se escriba y no coincida con lo que ya tenemos configurado, nos enviará al componente que coincida que con el path que coloquemos en el Redirect */}
-                <Redirect to='/Home' />
-                {/* En este caso, este Redirect nos llevará al renderizado de los productos */}
                 </BrowserRouter>
             </CartProvider>
         </div>

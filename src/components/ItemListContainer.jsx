@@ -8,7 +8,6 @@ function ItemListContainer() {
 
     // API CALL  - Llamado a un archivo .JSON local
     // Creo una función asincrónica
-    // No se puede invocar Await sin un Async
     const getProducts = async () => {
         // Espero a que la data se fetchee
         const data = await fetch('../JSON/Datalist.json')

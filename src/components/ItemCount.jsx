@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
-import { useCartContext } from '../Context';
+
 
 function ItemCount(props){
     const[qty, setQty] = useState(0)
-    const { updateCartCount } = useCartContext();
+    
     
     const onIncrease = () => {
         const newValue = qty+1
@@ -21,11 +21,11 @@ function ItemCount(props){
         }
     }
 
-    const onAdd = () => {
-        const message = `Agregaste ${ qty } producto`
-        if(props.stock !== 0) {
-            (qty === 1) ? alert(message) : alert(message + `s`)
-        }
+    const onAdd = (qty, producto) => {
+        // const message = `Agregaste ${ qty } producto`
+        // if(props.stock !== 0) {
+        //     (qty === 1) ? alert(message) : alert(message + `s`)
+        // }
     }
 
     return(
@@ -35,8 +35,7 @@ function ItemCount(props){
             <div className='boxQuantity'>{ qty }</div>
             <Button color="primary" size="lg" active  onClick={ onIncrease } >+</Button>{' '}
             </div>
-            <Button color="success" className ='mt-2 mb-2' size="lg" active  onClick={ ()=> updateCartCount(qty) } >Agregar al Carrito</Button>
-            <Link to= "/Cart" className ='mt-2 mb-2' size="lg">Ir al carrito</Link>
+            <Button color="success" className ='mt-2 mb-2' size="lg" active  onClick={ ()=> props.onAdd(qty, props.product) } >Agregar al Carrito</Button>
         </div>
     )
 }
