@@ -36,7 +36,8 @@ function ItemDetailConteiner() {
                         title={products.title} 
                         description={products.descripcion} 
                         category={products.categoria}
-                        price={products.price}/>
+                        price={products.price}
+                        producto={products}/>
              </div>
            }
         </div>
