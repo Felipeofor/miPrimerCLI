@@ -1,5 +1,5 @@
 // Importamos lo que necesitemos de react-router-dom
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 // Importamos los componentes
 import NavBar from "./components/Navbar";
@@ -7,7 +7,7 @@ import ItemListContainer from './components/ItemListContainer';
 import ItemDetailConteiner from './components/ItemDetailConteiner';
 import Categories from "./components/Categories";
 import Cart from "./components/Cart";
-import CartProvider, { CartContext } from "./Context";
+import CartProvider from "./Context";
 
 //Importamos los estilos
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -26,9 +26,6 @@ function App() {
                         <Route exact path='/Productos/Categoria/ItemDetail/:productById'  component={ ItemDetailConteiner }/>
                         <Route path="/cart" exact component={Cart} />
                     </Switch>
-                {/* Cualquier otra URL que se escriba y no coincida con lo que ya tenemos configurado, nos enviará al componente que coincida que con el path que coloquemos en el Redirect */}
-                {/* <Redirect to='/Home' /> */}
-                {/* En este caso, este Redirect nos llevará al renderizado de los productos */}
                 </BrowserRouter>
             </CartProvider>
         </div>

@@ -2,21 +2,17 @@ import React from 'react'
 import { useCartContext } from '../Context';
 
 
-function Cart() {
-
+function Cart(props) {
     const {items} = useCartContext();
-
     return(
         <>
-        {items.length > 0 ? (
+        {items.length > 0 ? 
             <>
-               <h1>{items[0].title}</h1>
-               <p>{items[0].cnt}</p>
+               <h1>{items.props.title}</h1>
+               <p>{items.props.cnt}</p>
                </>
-        ) 
-        : (
-            <h1>El carrito esta vacio :(</h1>
-        )}
+        : 
+            <h1>El carrito esta vacio :</h1>}
         </>
     )
 }

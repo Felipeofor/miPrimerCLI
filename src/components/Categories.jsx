@@ -1,8 +1,4 @@
 import React from 'react'
-/**para poder darle utilidad a nuestra URL params 
- * ademas de poder reutilizarlo multiples veses el componente
- * podemos usar el Hook useParams
- *  */
 import { useParams } from 'react-router-dom';
 import ItemList from "./ItemList";
 import PulseLoader from "react-spinners/PulseLoader";
