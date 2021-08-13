@@ -1,5 +1,5 @@
 // Importamos lo que necesitemos de react-router-dom
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 // Importamos los componentes
 import NavBar from "./components/Navbar";

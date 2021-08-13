@@ -11,13 +11,7 @@ import {useState, useEffect} from 'react';
 export default function Categories() {
     const [productsCategory,setProductsCategory] = useState([]);
 
- 
-    /**para usar useParams debemos usar la sintaxys puesta abajo 
-     * y colocar el nombre el params que usamos en el Switch
-     */
     const {categoryByID} = useParams();
-
-
 
     const getCategory = async () => {
         // Espero a que la llamda se fetchee
