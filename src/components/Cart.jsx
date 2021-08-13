@@ -1,6 +1,6 @@
 import React from 'react'
 import { useCartContext } from '../Context';
-
+import ItemCount from './ItemCount';
 
 function Cart(props) {
     const {items} = useCartContext();
