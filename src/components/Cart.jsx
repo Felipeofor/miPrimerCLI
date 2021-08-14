@@ -1,20 +1,21 @@
 import React from 'react'
 import { useCartContext } from '../Context';
-import ItemCount from './ItemCount';
 
-function Cart(props) {
+function Cart() {
     const {items} = useCartContext();
+    console.log(items)
     return(
-        <>
-        {items.length > 0 ? 
-            <>
-               <h1>{items.props.title}</h1>
-               <p>{items.props.cnt}</p>
-               </>
-        : 
-            <h1>El carrito esta vacio :</h1>}
-        </>
-    )
+      <div>
+      {items.length > 0 ?
+      items.map(item => {
+       <div>
+       <h5>{ items.title }</h5>
+       <p> { items.cnt }</p>
+       </div>
+      })
+       : 
+       <h3>El carrito esta vacio :</h3>}
+</div>)
 }
 
 export default Cart;
