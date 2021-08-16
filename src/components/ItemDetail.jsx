@@ -10,7 +10,6 @@ const ItemDetail = ({ image, stock, title, description, price, producto }) => {
   const { addItems } = useCartContext();
   
   function onAdd(qty){
-    console.log(qty);
     agregarCarrito(true);
     addItems(qty,producto);
   }

@@ -1,10 +1,8 @@
 import React from 'react'
 import { useCartContext } from '../Context';
-import ItemCount from './ItemCount';
 
 function Cart() {
   const {items} = useCartContext();
-  console.log(items)
   return(
     <div className="Cart">
       {
@@ -16,9 +14,9 @@ function Cart() {
                   <h3>{item.title}</h3>
                   <p>Precio: {item.price}</p>
                 </div>
-              <img className="Cart__img" src={item.image}/>
+              <img alt="imagen producto" className="Cart__img" src={item.image}/>
               </div>
-              
+ 
             )
           })
         ) : (
