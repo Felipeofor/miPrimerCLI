@@ -33,10 +33,10 @@ const CartProvider = ({children}) =>{
         setCartCount(prev => prev + qty)
     };
 
-    // function total() {
-    //     const precioFinal = items.reduce((a, b) => a + b.props.precio * b.cnt, 0);
-    //     return precioFinal;
-    //   }
+    function total() {
+        const precioFinal = items.reduce((a, b) => a + b.props.precio * b.cnt, 0);
+        return precioFinal;
+      }
 
       function cantidadItems() {
         const itemsTotales = items.reduce((a, b) => a + b.cnt, 0);

@@ -3,6 +3,12 @@ body{
   background-attachment: fixed;
 }
 
+/* LINKS */
+
+a:link, a:visited, a:active {
+  text-decoration:none;
+}
+
 /***********Navbar**********/
 
 .navbar {
@@ -33,7 +39,10 @@ body{
   color: white;
 }
 
-
+.navbar-nav{
+  font-size: 1.2rem;
+  margin: 14px 0 0 0;
+}
 
 .CartWidget{
   font-size: 2vw;
@@ -60,10 +69,9 @@ a.navbar-brand{
   padding: 1vw 2vw;
   display: flex;
   justify-content: center;
-  /* background-color: blue; */
 }
 .containerItemList{
-  /* background-color: brown; */
+
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -192,6 +200,28 @@ a.navbar-brand{
   font-size: 1.5rem;
 }
 
+.boxQuantity{
+  font-size: 1.5rem;
+  display: grid;
+  align-items: center;
+  align-content: center;
+}
+
+.ItemDetail__irAlCarrito{
+  border: 1px solid red;
+  color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem;
+  align-items: center;
+  align-items: center;
+  display: flex;
+}
+
+.ItemDetail__irAlCarrito:hover{
+  color: red;
+}
+
 /*************Cart************/
 
 .counter__style {
@@ -243,6 +273,19 @@ a.navbar-brand{
 @media (min-width: 1px) and (max-width: 600.98px) { 
  
   /*************Card************/
+
+  .Cart{
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+  }
+
+  .Cart_conteiner{
+    width: 260px;
+    height: auto;
+  }
+
   .containerCard {
     width: 260px;
     height: auto;
@@ -271,6 +314,7 @@ a.navbar-brand{
     padding: 3rem 1rem 1rem 1rem;
     color: red;
     font-size: 1.5rem;
+    width: 100%;
   }
 }
 
@@ -281,5 +325,18 @@ a.navbar-brand{
     padding: 3rem 3rem 1rem 3rem;
     color: red;
     font-size: 1.5rem;
+    width: 100%;
+    display: flex;
   }
+
+  .Cart {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .Cart_conteiner {
+    width: 500px;
+    height: auto;
+  }
+
 }
