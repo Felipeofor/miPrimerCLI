@@ -8,7 +8,7 @@ function NavBar(){
     return(
         <div id="header">
 			<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-  				<div className="container-fluid d-flex justify-content-center">
+  				<div className="navbar__conteiner container-fluid d-flex justify-content-center">
     				<Link to="/" className="navbar-brand">El super del Taekwondo</Link>
    				 		<button className="navbar-toggler" type="button" data-bs-toggle="collapse" 	data-bs-target="#navbarSupportedContent" 	aria-controls="navbarSupportedContent" aria-expanded="false" 	aria-label="Toggle navigation">
       						<span className="navbar-toggler-icon"></span>
