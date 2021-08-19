@@ -2,7 +2,7 @@ import React from 'react'
 import { useCartContext } from '../Context';
 
 function Cart() {
-  const {items} = useCartContext();
+  const {items, total, removeItems} = useCartContext();
   return(
     <div className="Cart">
       {
@@ -13,6 +13,8 @@ function Cart() {
                 <div className="Cart__info">
                   <h3>{item.title}</h3>
                   <p>Precio: {item.price}</p>
+                  <p>{total}</p>
+                  <button className="Cart__button" onClick={removeItems}></button>
                 </div>
               <img alt="imagen producto" className="Cart__img" src={item.image}/>
               </div>
@@ -20,7 +22,7 @@ function Cart() {
             )
           })
         ) : (
-          <h3>El carrito esta vacio :(</h3>
+          <h3 className="Cart__h3">El carrito esta vacio :(</h3>
         )
       }
     </div>

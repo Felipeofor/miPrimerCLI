@@ -256,6 +256,10 @@ a.navbar-brand{
   padding: 2rem;
 }
 
+.Cart__h3 {
+  color: red;
+}
+
 .Cart__info{
   width: 20rem;
   margin: 0 5rem 0 5rem;

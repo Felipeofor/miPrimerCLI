@@ -23,7 +23,7 @@ const CartProvider = ({children}) =>{
       };
 
       const removeItems = (item) => {
-        const newItems = items.filter((x) => x.id !== item);
+        const newItems = items.filter((x) => x.id !== item.id);
         setItems(newItems);
       };
 
@@ -34,7 +34,7 @@ const CartProvider = ({children}) =>{
     };
 
     function total() {
-        const precioFinal = items.reduce((a, b) => a + b.props.precio * b.cnt, 0);
+        const precioFinal = items.reduce((a, b) => a + b.price * b.cnt, 0);
         return precioFinal;
       }
 
@@ -45,7 +45,7 @@ const CartProvider = ({children}) =>{
       }
 
     return(
-        <CartContext.Provider value= {{ cartCount, updateCartCount, isInCart, addItems, removeItems, clearItems, items, cantidadItems }}>{children}</CartContext.Provider>
+        <CartContext.Provider value= {{ cartCount, updateCartCount, isInCart, addItems, removeItems, clearItems, items, cantidadItems, total }}>{children}</CartContext.Provider>
     )
 };
 
