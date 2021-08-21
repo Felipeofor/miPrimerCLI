@@ -272,6 +272,22 @@ a.navbar-brand{
   margin: 0 10px 0 10px;
 }
 
+.Cart__button{
+  background-color: red;
+  color: white;
+  padding: 6px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.Cart__total{
+  font-size: 2rem;
+  color: red;
+}
+
 /*************Media queries************/
 
 @media (min-width: 1px) and (max-width: 600.98px) { 

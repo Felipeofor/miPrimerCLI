@@ -13,18 +13,18 @@ function Cart() {
                 <div className="Cart__info">
                   <h3>{item.title}</h3>
                   <p>Precio: {item.price}</p>
-                  <p>{total}</p>
-                  <button className="Cart__button" onClick={removeItems}></button>
+                  
+                  <button className="Cart__button" onClick={() => removeItems(item)}>Quitar</button>
                 </div>
               <img alt="imagen producto" className="Cart__img" src={item.image}/>
               </div>
- 
             )
           })
         ) : (
           <h3 className="Cart__h3">El carrito esta vacio :(</h3>
         )
       }
+      <p className="Cart__total">Total: {total()}</p>
     </div>
   )
 }
