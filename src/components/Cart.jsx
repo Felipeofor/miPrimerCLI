@@ -28,7 +28,12 @@ function Cart() {
           </div>
         )
       }
-      {items.length > 0 ? (<p className="Cart__total">Total: {total()}</p>) : (<></>)}
+      {items.length > 0 ? (
+      <div className="Cart__total">
+        <p >Total: {total()}</p>
+        <button className="Cart__button">Finalizar compra</button>
+      </div>)
+       : (<></>)}
     </div>
   )
 }

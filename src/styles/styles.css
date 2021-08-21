@@ -297,11 +297,18 @@ a.navbar-brand{
 }
 
 .Cart__total{
+  display: flex;
   font-size: 2rem;
   color: red;
   background-color: #000000a8;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 8px;  
+  align-items: center;
+}
+
+.Cart__total p {
+  margin: 1rem;
+
 }
 
 .Cart__link{
