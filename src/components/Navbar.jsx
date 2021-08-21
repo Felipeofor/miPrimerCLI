@@ -4,7 +4,6 @@ import CartWidget from './CartWidget';
 import { useCartContext } from '../Context';
 
 function NavBar(){
-	const { cantidadItems } = useCartContext();
     return(
         <div id="header">
 			<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -30,7 +29,7 @@ function NavBar(){
           					</ul>
        	 					</li>
      	 				</ul>
-						  {cantidadItems()}<CartWidget/>
+						  <CartWidget/>
     				</div>
   				</div>
 			</nav>

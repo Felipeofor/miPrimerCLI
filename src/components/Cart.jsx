@@ -23,7 +23,7 @@ function Cart() {
           })
         ) : (
           <div className="Cart__vacia">
-          <h3 className="Cart__h3">El carrito esta vacio :(</h3>
+          <h3 className="Cart__h3">El carrito esta vacio!</h3>
           <Link ClassName="Cart__link" to="/">Volver a Home</Link>
           </div>
         )

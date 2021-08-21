@@ -45,7 +45,7 @@ a:link, a:visited, a:active {
 }
 
 .CartWidget{
-  font-size: 2vw;
+  font-size: 1.6rem;
   transition: 200ms ease
 }
 .CartWidget:hover{
