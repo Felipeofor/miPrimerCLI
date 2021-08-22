@@ -10,7 +10,7 @@ function Cart() {
         items.length > 0 ? (
           items.map(item => {
             return(
-              <div className="Cart_conteiner">
+              <div className="Cart__conteiner">
                 <div className="Cart__info">
                   <h3>{item.title}</h3>
                   <p>Precio: {item.price}</p>
@@ -31,7 +31,6 @@ function Cart() {
       {items.length > 0 ? (
       <div className="Cart__total">
         <p >Total: {total()}</p>
-        <button className="Cart__button">Finalizar compra</button>
       </div>)
        : (<></>)}
     </div>

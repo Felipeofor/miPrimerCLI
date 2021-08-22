@@ -1,25 +1,39 @@
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import PulseLoader from "react-spinners/PulseLoader";
+import { getFirestore } from "../firebase";
 
 function ItemListContainer() {
 
     const [products, setProducts] = useState([])
 
-    // API CALL  - Llamado a un archivo .JSON local
-    // Creo una función asincrónica
-    const getProducts = async () => {
-        // Espero a que la data se fetchee
-        const data = await fetch('../JSON/Datalist.json')
-        // Aplico el método JSON() para extraer la respuesta a la petición
-        const responseData = await data.json()
-        // Vemos qué llegó
-        setProducts(responseData)
-    }
+    useEffect(() => {
+        const firestore = getFirestore();
+        const collection =  firestore.collection("Productos");
+        const query = collection.get();
+        
+        query
+            .then((resultado) => {
+                resultado.forEach(documento => {
+                setProducts(documento.data())
+                })
+            })
+    })
+
+    // // API CALL  - Llamado a un archivo .JSON local
+    // // Creo una función asincrónica
+    // const getProducts = async () => {
+    //     // Espero a que la data se fetchee
+    //     const data = await fetch('../JSON/Datalist.json')
+    //     // Aplico el método JSON() para extraer la respuesta a la petición
+    //     const responseData = await data.json()
+    //     // Vemos qué llegó
+    //     setProducts(responseData)
+    // }
 
 
     useEffect(() => {
-        setTimeout(() => getProducts(), 2000)
+        setTimeout(() => getFirestore(), 2000)
     }, [])
     
     return(

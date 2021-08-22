@@ -113,9 +113,8 @@ a.navbar-brand{
 }
 .containerCard:hover{
   box-shadow: 5px 5px 10px rgba(170, 6, 6, 0.9);
-  transition: 300ms;
+  transition: 200ms;
   border: 2px solid  rgba(197, 120, 120, 0.486);
-
 }
 .linkCard {
   display: flex;
@@ -123,6 +122,7 @@ a.navbar-brand{
   justify-content: center;
   align-items: center;
 }
+
 .containerCard a {
   text-decoration: none;
   color: black;
@@ -210,6 +210,8 @@ a.navbar-brand{
   border: 1px solid red;
   color: white;
   border-radius: 8px;
+  font-size: 1.4rem;
+  background-color: red;
   padding: 1rem;
   margin: 1rem;
   align-items: center;
@@ -219,6 +221,10 @@ a.navbar-brand{
 
 .ItemDetail__irAlCarrito:hover{
   color: red;
+  background-color: white;
+  color: rgb(219, 71, 71);
+  font-size: 1.4vw;
+  transition: 200ms ease;
 }
 
 /*************Cart************/
@@ -243,7 +249,7 @@ a.navbar-brand{
   color: white;
 }
 
-.Cart_conteiner{
+.Cart__conteiner{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -281,6 +287,12 @@ a.navbar-brand{
   display: inline-block;
   font-size: 16px;
   border-radius: 8px;
+}
+
+.Cart__button:hover{
+  color: rgb(243, 243, 243);
+  font-size: 1.1vw;
+  transition: 200ms ease;
 }
 
 .Cart__vacia{
