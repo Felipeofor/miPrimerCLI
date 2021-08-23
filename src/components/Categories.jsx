@@ -19,9 +19,13 @@ export default function Categories() {
         
         query
             .then((resultado) => {
-                resultado.forEach(documento => {
-                setProducts(documento.data())
+                const documentos = resultado.docs.map(documento => {
+                return{
+                    ...documento.data()
+                }
+                documento.data()
                 })
+            setProducts(documentos)
             })
     })
 

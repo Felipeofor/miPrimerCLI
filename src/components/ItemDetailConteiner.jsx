@@ -15,11 +15,15 @@ function ItemDetailConteiner() {
         const query = collection.get();
         
         query
-        .then((resultado) => {
-            resultado.forEach(documento => {
-               setProducts(documento.data())
+            .then((resultado) => {
+                const documentos = resultado.docs.map(documento => {
+                return{
+                    ...documento.data()
+                }
+                documento.data()
+                })
+            setProducts(documentos)
             })
-        })
     })
 
     // // API CALL  - Llamado a un archivo .JSON local
