@@ -15,15 +15,13 @@ export default function Categories() {
     useEffect(() => {
         const firestore = getFirestore();
         const collection =  firestore.collection("Productos");
-        const query = collection.where('categoria', '==', categoryByID);
-        
-        query
+        const query = collection.where('categoria', '==', categoryByID)
+        query.get()
             .then((resultado) => {
                 const documentos = resultado.docs.map(documento => {
                 return{
                     ...documento.data()
                 }
-                documento.data()
                 })
             setProducts(documentos)
             })

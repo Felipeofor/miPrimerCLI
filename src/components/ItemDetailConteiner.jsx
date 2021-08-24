@@ -11,16 +11,15 @@ function ItemDetailConteiner() {
 
     useEffect(() => {
         const firestore = getFirestore();
-        const collection =  firestore.collection("Productos");
-        const query = collection.get();
-        
-        query
+        const collection =  firestore.collection('Productos');
+        const query = collection.where('title', '==', productById);
+
+        query.get()
             .then((resultado) => {
                 const documentos = resultado.docs.map(documento => {
                 return{
                     ...documento.data()
                 }
-                documento.data()
                 })
             setProducts(documentos)
             })
