@@ -15,7 +15,7 @@ export default function Categories() {
     useEffect(() => {
         const firestore = getFirestore();
         const collection =  firestore.collection("Productos");
-        const query = collection.get();
+        const query = collection.where('categoria', '==', categoryByID);
         
         query
             .then((resultado) => {
