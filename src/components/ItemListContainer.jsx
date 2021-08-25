@@ -18,6 +18,7 @@ function ItemListContainer() {
                 return{
                     ...documento.data()
                 }
+                documento.data()
                 })
             setProducts(documentos)
             })

@@ -3,13 +3,14 @@ import "firebase/firestore";
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDbr3qY758F_8EU9u-HQkAhWsIbdlfbeNQ",
-    authDomain: "el-super-del-taekwondo.firebaseapp.com",
-    projectId: "el-super-del-taekwondo",
-    storageBucket: "el-super-del-taekwondo.appspot.com",
-    messagingSenderId: "128225224512",
-    appId: "1:128225224512:web:723fc3c9a1483cf15abca5"
-  };
+  apiKey: "AIzaSyCNf6L2VZTR8WqQSYNorACTEjlHCyPpf9A",
+  authDomain: "el-super-del-taekwondo--2.firebaseapp.com",
+  projectId: "el-super-del-taekwondo--2",
+  storageBucket: "el-super-del-taekwondo--2.appspot.com",
+  messagingSenderId: "157116770338",
+  appId: "1:157116770338:web:295aa17cb98c22160c427b",
+  measurementId: "G-48R1F86S94"
+};
 
   //Firebase queda conectada a la app de la consola 
   const app = firebase.initializeApp(firebaseConfig);

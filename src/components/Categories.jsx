@@ -17,11 +17,12 @@ export default function Categories() {
         const collection =  firestore.collection("Productos");
         const query = collection.where('categoria', '==', categoryByID)
         query.get()
-            .then((resultado) => {
+	        .then((resultado) => {
                 const documentos = resultado.docs.map(documento => {
                 return{
                     ...documento.data()
                 }
+                documento.data()
                 })
             setProducts(documentos)
             })

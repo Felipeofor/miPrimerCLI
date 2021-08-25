@@ -9,34 +9,20 @@ function ItemDetailConteiner() {
     const [products, setProducts] = useState([])
     const {productById} = useParams();
 
-    useEffect(() => {
+    useEffect((productById) => {
         const firestore = getFirestore();
-        const collection =  firestore.collection('Productos');
-        const query = collection.where('title', '==', productById);
+        // const collection =  firestore.collection("Productos");
+        // const query = collection.get();
+        firestore.collection("Productos").doc(productById).get()
 
-        query.get()
             .then((resultado) => {
-                const documentos = resultado.docs.map(documento => {
-                return{
-                    ...documento.data()
-                }
-                })
-            setProducts(documentos)
+                const documentos = resultado.data()
+            setProducts(documentos);
+              console.log(documentos);
             })
     })
 
-    // // API CALL  - Llamado a un archivo .JSON local
-    // // Creo una función asincrónica
-    // // No se puede invocar Await sin un Async
-    // const getProducts = async () => {
-    //     // Espero a que la data se fetchee
-    //     const data = await fetch('../../../Json/Datalist.json')
-    //     // Aplico el método JSON() para extraer la respuesta a la petición
-    //     const responseData = await data.json()
-    //     // Vemos qué llegó
-    //     setProducts(responseData.filter((items) => items.title === productById)[0]);
-    // }
-
+  
 
     useEffect(() => {
         setTimeout(() => getFirestore(), 500)
@@ -44,7 +30,7 @@ function ItemDetailConteiner() {
 
     return (
         <div className='containerDetailContainer'>
-           { products.length === 0 ? <PulseLoader/> : 
+           { products.stock > 0 ? <PulseLoader/> : 
               <div className='containerDetailContainer__Product'>  
               <ItemDetail key={products.id} 
                         id={products.id} 
