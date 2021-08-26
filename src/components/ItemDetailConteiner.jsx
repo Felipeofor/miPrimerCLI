@@ -11,8 +11,6 @@ function ItemDetailConteiner() {
 
     useEffect((productById) => {
         const firestore = getFirestore();
-        // const collection =  firestore.collection("Productos");
-        // const query = collection.get();
         firestore.collection("Productos").doc(productById).get()
 
             .then((resultado) => {
@@ -20,7 +18,7 @@ function ItemDetailConteiner() {
             setProducts(documentos);
               console.log(documentos);
             })
-    })
+    }, [productById])
 
   
 

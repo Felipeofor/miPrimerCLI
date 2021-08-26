@@ -26,7 +26,7 @@ export default function Categories() {
                 })
             setProducts(documentos)
             })
-    })
+    },[categoryByID])
 
     // const getCategory = async () => {
     //     // Espero a que la llamda se fetchee
