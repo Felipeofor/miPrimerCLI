@@ -6,29 +6,33 @@ import { getFirestore } from "../firebase"
 
 function ItemDetailConteiner() {
 
-    const [products, setProducts] = useState([])
+    const [products, setProducts] = useState({stock:0})
     const {productById} = useParams();
+    const [show, setShow] = useState(false)
 
-    useEffect((productById) => {
+    useEffect(() => {
+        console.log(productById)
         const firestore = getFirestore();
         firestore.collection("Productos").doc(productById).get()
 
             .then((resultado) => {
                 const documentos = resultado.data()
+                
             setProducts(documentos);
-              console.log(documentos);
+            setShow(true);
+             
             })
     }, [productById])
 
   
 
-    useEffect(() => {
-        setTimeout(() => getFirestore(), 500)
-    }, [productById])
+   // useEffect(() => {
+   //     setTimeout(() => getFirestore(), 500)
+ //   }, [productById])
 
     return (
         <div className='containerDetailContainer'>
-           { products.stock > 0 ? <PulseLoader/> : 
+           { !show ? <PulseLoader/> : 
               <div className='containerDetailContainer__Product'>  
               <ItemDetail key={products.id} 
                         id={products.id} 

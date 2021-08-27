@@ -15,10 +15,10 @@ function ItemListContainer() {
         query
             .then((resultado) => {
                 const documentos = resultado.docs.map(documento => {
-                return{
-                    ...documento.data()
-                }
-                documento.data()
+                return(
+                    {id:documento.id,...documento.data()}
+                )
+                
                 })
             setProducts(documentos)
             })
