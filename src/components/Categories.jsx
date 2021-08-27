@@ -28,16 +28,6 @@ export default function Categories() {
             })
     },[categoryByID])
 
-    // const getCategory = async () => {
-    //     // Espero a que la llamda se fetchee
-    //     const llamada = await fetch('../../JSON/Datalist.json');
-    //     // Aplico el método JSON() para extraer la respuesta a la petición
-    //     const responsellamada = await llamada.json()
-    //     // Vemos qué llegó
-    //     setProductsCategory(responsellamada.filter((product) => product.categoria === categoryByID));
-    // }
-
-
     useEffect(() => {
         getFirestore();
     },[categoryByID]);

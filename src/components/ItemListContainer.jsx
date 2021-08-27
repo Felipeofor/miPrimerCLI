@@ -24,18 +24,6 @@ function ItemListContainer() {
             })
     })
 
-    // // API CALL  - Llamado a un archivo .JSON local
-    // // Creo una función asincrónica
-    // const getProducts = async () => {
-    //     // Espero a que la data se fetchee
-    //     const data = await fetch('../JSON/Datalist.json')
-    //     // Aplico el método JSON() para extraer la respuesta a la petición
-    //     const responseData = await data.json()
-    //     // Vemos qué llegó
-    //     setProducts(responseData)
-    // }
-
-
     useEffect(() => {
         setTimeout(() => getFirestore(), 2000)
     }, [])

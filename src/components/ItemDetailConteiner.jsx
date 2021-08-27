@@ -24,12 +24,6 @@ function ItemDetailConteiner() {
             })
     }, [productById])
 
-  
-
-   // useEffect(() => {
-   //     setTimeout(() => getFirestore(), 500)
- //   }, [productById])
-
     return (
         <div className='containerDetailContainer'>
            { !show ? <PulseLoader/> : 
