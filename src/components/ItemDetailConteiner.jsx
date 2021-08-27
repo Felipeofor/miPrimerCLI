@@ -20,7 +20,7 @@ function ItemDetailConteiner() {
                 
             setProducts(documentos);
             setShow(true);
-             
+             documentos.id = productById
             })
     }, [productById])
 
