@@ -1,3 +1,10 @@
+Proyecto final del curso de Coder House.
+
+React.js
+
+enlace al video: https://youtu.be/uVNZ3MvQbPo
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
