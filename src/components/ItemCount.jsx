@@ -20,12 +20,12 @@ function ItemCount(props){
         }
     }
 
-    const onAdd = (qty, producto) => {
-        // const message = `Agregaste ${ qty } producto`
-        // if(props.stock !== 0) {
-        //     (qty === 1) ? alert(message) : alert(message + `s`)
-        // }
-    }
+    // const onAdd = (qty, producto) => {
+    //     const message = `Agregaste ${ qty } producto`
+    //     if(props.stock !== 0) {
+    //         (qty === 1) ? alert(message) : alert(message + `s`)
+    //     }
+    // }
 
     return(
         <div className= 'containerItemCount'>

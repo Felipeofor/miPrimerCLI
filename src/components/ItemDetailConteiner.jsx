@@ -11,7 +11,6 @@ function ItemDetailConteiner() {
     const [show, setShow] = useState(false)
 
     useEffect(() => {
-        console.log(productById)
         const firestore = getFirestore();
         firestore.collection("Productos").doc(productById).get()
 

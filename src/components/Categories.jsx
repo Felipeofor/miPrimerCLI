@@ -22,7 +22,6 @@ export default function Categories() {
                 return{
                     ...documento.data()
                 }
-                documento.data()
                 })
             setProducts(documentos)
             })

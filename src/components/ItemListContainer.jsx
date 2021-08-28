@@ -22,10 +22,6 @@ function ItemListContainer() {
                 })
             setProducts(documentos)
             })
-    })
-
-    useEffect(() => {
-        setTimeout(() => getFirestore(), 2000)
     }, [])
     
     return(

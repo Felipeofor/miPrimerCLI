@@ -1,43 +1,38 @@
-import React from 'react';
-import { getStore } from "../firebase"
+import {useState} from 'react';
+import { getFirestore } from "../firebase";
 
 function CartCheckOut() {
 
-    const newOrder = {
-        buyer = 
-        {
-        name, 
-        phone,
-        email
-        },
-    items = 
-        [{
-        id,
-        title,
-        price
-        }],date, total 
-    }
+    const [orden, setOrden] = useState(false)
 
-    const firestore = getStore()
+        const newOrder = {
+            buyer: {
+                name: "Felipe",
+                phone: "115995578",
+                email: "prueba@gmail.com"
+            },
+        }
+
+    const firestore = getFirestore()
     const collection = firestore.collection('ordenes')
 
-    if (order === '') {
+    if (orden === '') {
         const query = collection.add(newOrder)
         query
             .then((res) => {
-                setOrder(res.id)
-                history.pushState(`/Cart/Checkout/${res.id}`);
+                setOrden(res.id)
+                // history.pushState(`/Cart/Checkout/${res.id}`);
             })
             .catch((err) => {
                 console.error(err)
             })
-    } else {
-        const query = collection.doc(order)
     }
+    //  else {
+    //     const query = collection.doc(orden)
 
     return(
         <div> 
-            
+            {orden}
         </div>
     )
 
