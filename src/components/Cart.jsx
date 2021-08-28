@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 
 function Cart() {
   const {items, total, removeItems} = useCartContext();
+
   return(
     <div className="Cart">
       {
@@ -30,6 +31,7 @@ function Cart() {
       }
       {items.length > 0 ? (
       <div className="Cart__total">
+        <button className="Cart__button">Generar ticket</button>
         <p >Total: {total()}</p>
       </div>)
        : (<></>)}
