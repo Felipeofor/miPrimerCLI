@@ -6,10 +6,8 @@ import {useState, useEffect} from 'react';
 import { getFirestore } from "../firebase";
 
 export default function Categories() {
-    // const [productsCategory,setProductsCategory] = useState([]);
 
     const {categoryByID} = useParams();
-
     const [products, setProducts] = useState([])
 
     useEffect(() => {

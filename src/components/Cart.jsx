@@ -2,7 +2,6 @@ import { useState} from 'react'
 import { useCartContext } from '../Context';
 import { Link } from "react-router-dom";
 import { getFirestore } from "../firebase";
-// import CartCheckOut from './CartCheckOut';
 
 function Cart() {
   const {items, total, removeItems} = useCartContext();
