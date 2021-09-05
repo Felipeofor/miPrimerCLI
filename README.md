@@ -2,7 +2,8 @@ Proyecto final del curso de Coder House.
 
 React.js
 
-enlace al video: https://youtu.be/uVNZ3MvQbPo
+enlace al video: https://youtu.be/BlJXSKuNLWw![Screenshot (3)](https://user-images.githubusercontent.com/81161385/132131806-226a4311-cf8f-4082-8fb3-76be76010d83.png)
+
 
 
 # Getting Started with Create React App
